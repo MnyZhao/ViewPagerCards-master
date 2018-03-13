@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!--指定这些属性都是谁的，注意这里添加完属性要在自定义View类构造方法里使用-->
+    <!--注意：当写完这个属性后，布局XML文件要想引用的话，必须要同步Gradle文件-->
+    <declare-styleable name="Indicator">
+        <!--定义控件显示圆的数量 参数format是类型-->
+        <attr name="setNumber" format="integer"></attr>
+        <!--定义空心圆的颜色  参数format是类型,reference表示什么都能装-->
+        <attr name="setBgColor" format="reference"></attr>
+        <!--定义实心圆的颜色  参数format是类型,reference表示什么都能装-->
+        <attr name="setForeColor" format="reference"></attr>
+    </declare-styleable>
+</resources>

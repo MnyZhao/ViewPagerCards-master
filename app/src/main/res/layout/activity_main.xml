@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/cardTypeBtn"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragments" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Scale" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="50dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center"
+        android:overScrollMode="never"
+        android:paddingBottom="30dp"
+        android:paddingEnd="@dimen/card_padding"
+        android:paddingLeft="@dimen/card_padding"
+        android:paddingRight="@dimen/card_padding"
+        android:paddingStart="@dimen/card_padding" />
+    <com.github.rubensousa.viewpagercards.Indicator
+        android:id="@+id/indictor"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        app:setNumber="4"
+        app:setBgColor="@color/colorPrimaryDark"
+        app:setForeColor="@color/colorAccent"
+        android:paddingBottom="10dp"
+        layout_centerhorizontal="true"
+        android:layout_height="60dp" />
+    <!--<me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indictor"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="48dp"
+        app:ci_drawable="@drawable/account_radius"
+        app:ci_drawable_unselected="@drawable/blue_radius"
+        ></me.relex.circleindicator.CircleIndicator>-->
+
+</android.support.design.widget.CoordinatorLayout>
