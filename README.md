@@ -205,3 +205,5 @@ public interface CardAdapter {
 mViewPager.setAdapter(mFragmentCardAdapter);
 mViewPager.setPageTransformer(false, mFragmentCardShadowTransformer);
 ```
+其中CardAdapter下的MAX_ELEVATION_FACTOR参数控制间隔 数值越小间隔越小
+activity_main.xml中ViewPager的padding 控制显示的左右两侧布局的多少
