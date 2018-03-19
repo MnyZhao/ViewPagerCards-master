@@ -74,13 +74,13 @@ public class Indicator extends View {
         super.onDraw(canvas);
         //画多个空心圆，为了使圆步挤在一起，所以对x轴坐标进行动态修改
         /*xStart*/
-        int xStart = width / 2 - (number * 2*r + (number - 1) * r)/2;
+        int xStart = width / 2 - (number * 2 * r + (number - 1) * r) / 2;
         for (int x = 0; x < number; x++) {
-            canvas.drawCircle(xStart + x * r * 3, 60, r, bgPaint);
+            canvas.drawCircle(xStart + x * r * 3, height / 2, r, bgPaint);
         }
         //画实心圆,为使实心圆能够进行X轴移动, 参数1加上了偏移量   
 
-        canvas.drawCircle(xStart + offset, 60, r, forePaint);
+        canvas.drawCircle(xStart + offset, height / 2, r, forePaint);
     }
 
     //初始化画笔对象
@@ -116,4 +116,7 @@ public class Indicator extends View {
         invalidate();
     }
 
+    public void setNumber(int number) {
+        this.number = number;
+    }
 }

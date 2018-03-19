@@ -2,7 +2,6 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true">
 
@@ -42,7 +41,7 @@
         android:paddingLeft="@dimen/card_padding"
         android:paddingRight="@dimen/card_padding"
         android:paddingStart="@dimen/card_padding" />
-    <com.github.rubensousa.viewpagercards.Indicator
+   <!-- <com.github.rubensousa.viewpagercards.Indicator
         android:id="@+id/indictor"
         android:layout_width="match_parent"
         android:layout_gravity="bottom"
@@ -51,8 +50,8 @@
         app:setForeColor="@color/colorAccent"
         android:paddingBottom="10dp"
         layout_centerhorizontal="true"
-        android:layout_height="60dp" />
-    <!--<me.relex.circleindicator.CircleIndicator
+        android:layout_height="60dp" />-->
+    <me.relex.circleindicator.CircleIndicator
         android:id="@+id/indictor"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -60,6 +59,6 @@
         android:layout_marginBottom="48dp"
         app:ci_drawable="@drawable/account_radius"
         app:ci_drawable_unselected="@drawable/blue_radius"
-        ></me.relex.circleindicator.CircleIndicator>-->
+        ></me.relex.circleindicator.CircleIndicator>
 
 </android.support.design.widget.CoordinatorLayout>

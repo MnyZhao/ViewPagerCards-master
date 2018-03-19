@@ -23,21 +23,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ShadowTransformer mFragmentCardShadowTransformer;
 
     private boolean mShowingFragments = false;
-   /* private me.relex.circleindicator.CircleIndicator indicator;*/
-    private Indicator indicators;
+    private me.relex.circleindicator.CircleIndicator indicator;
+ /*   private Indicator indicators;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager) findViewById(viewPager);
-       /* indicator= (me.relex.circleindicator.CircleIndicator) findViewById(R.id.indictor);*/
-        indicators= (Indicator) findViewById(R.id.indictor);
+        indicator= (me.relex.circleindicator.CircleIndicator) findViewById(R.id.indictor);
+       /* indicators= (Indicator) findViewById(R.id.indictor);*/
         mButton = (Button) findViewById(R.id.cardTypeBtn);
         ((CheckBox) findViewById(R.id.checkBox)).setOnCheckedChangeListener(this);
         mButton.setOnClickListener(this);
-        //设置ViewPager的监听器
-        mViewPager.setOnPageChangeListener(new MyPagerListner());
+      /*  //设置ViewPager的监听器
+        mViewPager.setOnPageChangeListener(new MyPagerListner());*/
         mCardAdapter = new CardPagerAdapter();
         mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text_1));
         mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text_1));
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mViewPager.setAdapter(mCardAdapter);
         mViewPager.setPageTransformer(false, mCardShadowTransformer);
         mViewPager.setOffscreenPageLimit(3);
-        /*indicator.setViewPager(mViewPager);
-        mCardAdapter.registerDataSetObserver(indicator.getDataSetObserver());*/
+        indicator.setViewPager(mViewPager);
+        mCardAdapter.registerDataSetObserver(indicator.getDataSetObserver());
 
     }
 
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCardShadowTransformer.enableScaling(b);
         mFragmentCardShadowTransformer.enableScaling(b);
     }
-    //创建ViewPager的监听事件
+   /* //创建ViewPager的监听事件
     class MyPagerListner implements ViewPager.OnPageChangeListener{
         //在ViewPager滑动时回调
         //参数1:item的位置  参数2：偏移的百分比，这个百分比用于接近于1  参数3：偏移量
@@ -98,5 +98,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onPageScrollStateChanged(int state) {
 
         }
-    }
+    }*/
 }
