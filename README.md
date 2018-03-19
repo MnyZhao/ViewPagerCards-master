@@ -10,7 +10,7 @@
 
 
 <img src="https://rubensousa.github.io/img/duolingo_viewpager.gif" width=300></img> <img src="https://rubensousa.github.io/img/viewpager_result.gif" width=300></img>
-
+<img src="https://s21.aconvert.com/convert/p3r68-cdx67/r6ap7-c1so6.gif" width=300></img>
 ![](./gif/ViewPagerCardView.gif)
 
 
